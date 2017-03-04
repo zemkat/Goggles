@@ -13,7 +13,6 @@
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(32, PIN);
 
 uint32_t offset = 0; // Position of spinny eyes
-uint32_t color  = 0x00FF00; // green
 uint32_t tail_length  = 5; // 
 uint32_t scoot_delay  = 100; // control speed
 uint32_t bright[5] = {5,10,25,100,255}; // manual for now
