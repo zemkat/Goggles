@@ -32,7 +32,6 @@ void loop() {
     // first eye has pixels 0-15, second has 16-31
     for (int j=0;j<tail_length;j++) {
         int real_offset = (offset+j) % 16;
-        int dropoff = int(255.0/tail_length);
         pixels.setPixelColor(real_offset, 0, bright[j], 0); // first eye
         pixels.setPixelColor(real_offset+16, 0, bright[j], 0); // second
     }
