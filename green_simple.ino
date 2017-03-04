@@ -8,7 +8,7 @@
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(32, PIN);
 
 uint32_t offset = 0; // Position of spinny eyes
-uint32_t color  = 0x00FF00; // Start red
+uint32_t color  = 0x00FF00; // green
 
 void setup() {
 #ifdef __AVR_ATtiny85__ // Trinket, Gemma, etc.
@@ -23,7 +23,7 @@ void loop() {
     uint32_t t;
 
     pixels.setPixelColor(offset, color);
-    pixels.setPixelColor(offset+1, color);
+    pixels.setPixelColor(offset+1 % 16, color);
     pixels.setPixelColor(offset+16, color);
     pixels.setPixelColor(offset+17 % 16, color);
     pixels.show();
